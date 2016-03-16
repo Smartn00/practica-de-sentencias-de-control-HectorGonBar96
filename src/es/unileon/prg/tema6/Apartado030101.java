@@ -39,13 +39,16 @@ public class Apartado030101 extends Apartado {
 		cabecera("01","");
 
 		//Cambiar el valor de la nota para hacer pruebas
-		float nota=(float) 5.5;
+		float nota=(float) 3.2;
 			
 		Alumno alumno =new Alumno("1000011111","Juan");
 		alumno.asignarNota(nota);
 		System.out.println(alumno);
+
 		//Inicio modificacion
-		
+		if(nota<5){
+			System.out.println("El alumno debe recuperar");
+		}
 		
 		// Fin modificacion
 	}
@@ -63,6 +66,15 @@ public class Apartado030101 extends Apartado {
 		cabecera("02", "");
 
 		// Inicio modificacion
+		float nota=Teclado.readFloat();
+
+		Alumno alumno =new Alumno("1000011111","Juan");
+		alumno.asignarNota(nota);
+		System.out.println(alumno);
+
+		if(nota<5){
+			System.out.println("El alumno debe recuperar");
+		}
 		
 		
 		// Fin modificacion
@@ -82,6 +94,21 @@ public class Apartado030101 extends Apartado {
 		cabecera("03", "");
 
 		// Inicio modificacion
+
+		float nota=Teclado.readFloat();
+
+		if(nota==Float.MIN_VALUE){
+		System.out.println("Los datos que se muestran a continuacion no son correctos");
+		}
+		
+
+		Alumno alumno =new Alumno("1000011111","Juan");
+		alumno.asignarNota(nota);
+		System.out.println(alumno);
+
+		if(nota<5){
+			System.out.println("El alumno debe recuperar");
+		}
 		
 		// Fin modificacion
 		System.out.println("Fin del ejercicio03");
@@ -147,18 +174,21 @@ public class Apartado030101 extends Apartado {
 		nota3=Teclado.readInteger();
 
 
-		// Inicio modificacion
-		/* -- Quitar comentarios
-		if (nota1 >=5)
-           sumaNotas=nota1;
-           if (nota2>=5)
-             sumaNotas=sumaNotas + nota2;
-             if (nota3>=5)
-                sumaNotas=sumaNotas + nota3;
-                media=sumaNotas/3;
+		//Inicio modificacion
+		
+		if (nota1 >=5){
+           		sumaNotas=nota1;
+           			if (nota2>=5){
+             				sumaNotas=sumaNotas + nota2;
+             					if (nota3>=5){
+               						 sumaNotas=sumaNotas + nota3;
+               						 media=sumaNotas/3;
+						}
+					}	
+			}
                
-       }
-       */
+       
+      	
 	   // Fin modificacion
 		
       
