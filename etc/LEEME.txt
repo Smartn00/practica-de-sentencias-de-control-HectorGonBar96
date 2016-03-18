@@ -8,3 +8,49 @@ Problemas surgidos al realizar la practica:
 
 Respuestas a la preguntas:
 
+APARTADO 3.1.1 EJERCICO 4 
+
+El resultado es el siguiente:
+
+ Resultado 2
+ Fin del ejercicio04
+
+Entra en la segunda sentencia la cual da como resultado "Resultado 2" porque se cumple la sentencia de control if ((!a || b) || !(n1>n2)) ya que se evaluaría de la seguiente manera:
+
+ 1.((!true || false) || !(5>8));
+ 2.((false || false) || !false));
+ 3.( false || true )
+ 4.true
+
+En las otras dos sentencias el programa no entraria a la sentencia de control if ya que la evaluación de dicha sentencia da FALSE:
+
+if ((!a && b) || !(n2>n1))
+ 1.((!true || false) || !(8>5));
+ 2.((false || false) || !true));
+ 3.( false || false )
+ 4.false
+
+if ((n1>=n2) && (a || b))
+ 1.((5>=8) && (true || false));
+ 2.(false && true);
+ 3.false
+
+APARTADO 3.1.1 EJERCICIO 9
+
+El resultado es el siguiente:
+
+N1 y N2 son distintos
+
+Al avaluar los dos ifs del ejercicio el que devuelve true es el segundo ya que es verdad que (n1 != n2) porque lo que se esta probando en la condición es que las dos REFERENCIAS de los dos objetos NumeroEntero que se han creado (NumeroEntero n1 = new NumeroEntero(10); NumeroEntero n2 = new NumeroEntero(10);)por lo tanto estas REFERENCIAS no son iguales y la evaliuación de (n1==n2) es false.
+
+APARTADO 3.1.1 EJERCICIO 10
+
+Los resultados son los siguientes:
+
+N1 y N2 son distintos
+N1 y AUX son iguales
+
+Dichos resultados son consecuencia de que 
+
+
+
