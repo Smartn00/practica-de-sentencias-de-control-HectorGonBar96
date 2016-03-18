@@ -37,9 +37,12 @@ public class Rectangulo {
 	 */
 	public Rectangulo(int base, int altura) {
 		//Inicio modificacion ejercicio07
-		
-		
-		
+
+		if( base<=0 && altura<=0){
+		_base=0;
+		_altura=0;
+		}
+	
 		//Fin modificacion ejercicio07		
 	}
 	
@@ -70,11 +73,15 @@ public class Rectangulo {
 	 */
 	public void setBase(int base){
 		//Inicio modificacion ejercicio07
-		
-		
+
+		if(base > 0){
+				System.out.println("Introduce la base del rectangulo:");
+				base=Teclado.readInteger();
+		}
 		
 		//Fin modificacion ejercicio07			
 	}
+
 	
 	/**
 	 * Modifica la altura del rectangulo solo si la altura introducida  es mayor que 0
@@ -84,7 +91,11 @@ public class Rectangulo {
 	 */
 	public void setAltura(int altura){
 		//Inicio modificacion ejercicio07
-		
+		if(altura>0){
+			
+			System.out.println("Introduce la nueva altura del rectangulo:");
+			altura=Teclado.readInteger();
+		}
 		
 		
 		//Fin modificacion ejercicio07		
@@ -100,11 +111,21 @@ public class Rectangulo {
 	 */
 	
 	public boolean esUnCuadrado(){
+
 		boolean esUnCuadrado=false;
 		//Inicio modificacion ejercicio07
-		
-		
-		
+
+		if(_base==_altura){
+
+			esUnCuadrado=true;
+		}
+
+		if(_base==0 && _altura==0){
+			
+			esUnCuadrado=false;
+
+		}
+
 		//Fin modificacion ejercicio07
 		return esUnCuadrado;
 		
@@ -148,9 +169,8 @@ public class Rectangulo {
 		salida.append("base: "+_base+" ");
 		salida.append("altura: "+_altura+" ");
 		//Inicio modificacion ejercicio07
-		
-		
-		
+		salida.append(" Es un Cuadrado");
+
 		//Fin modificacion ejercicio07
 		return salida.toString();	
 		
