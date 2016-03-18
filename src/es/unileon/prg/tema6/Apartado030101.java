@@ -202,6 +202,7 @@ public class Apartado030101 extends Apartado {
 	 * Instruccion if - Ejercicio6.
 	 *
 	 * Modificar el codigo del ejercicio 5 de forma que el resultado sea el mismo pero solo 
+
 	 * sea necesario utilizar una sentencia if.
 	 *
 	 */
@@ -209,6 +210,31 @@ public class Apartado030101 extends Apartado {
 		cabecera("06", "");
 
 		// Inicio modificacion
+		Alumno alumno =new Alumno("1000011111","Juan");
+		int nota1=0, nota2=0, nota3=0, sumaNotas=0;
+		float media=0;
+
+		System.out.println("Introduce la nota del primer examen:");
+		nota1=Teclado.readInteger();
+
+		System.out.println("Introduce la nota del segundo examen:");
+		nota2=Teclado.readInteger();
+
+		System.out.println("Introduce la nota del tercer examen:");
+		nota3=Teclado.readInteger();
+
+		if(nota1>5 && nota2>5 && nota3>5){
+
+			sumaNotas=nota1+nota2+nota3;
+			media=sumaNotas/3;
+
+		}
+
+		alumno.asignarNota(media);
+	
+       		System.out.println(alumno);
+	
+
 		// Fin modificacion
 	}
 
@@ -258,8 +284,17 @@ public class Apartado030101 extends Apartado {
 		altura=Teclado.readInteger();
 
 		Rectangulo rectangulo= new Rectangulo(base,altura);
+
 		// Inicio modificacion
 		
+		//Rectangulo.getBase();
+		//Rectangulo.getAltura();
+		//Rectangulo.setBase(int base);
+		//Rectangulo.setAltura(int altura);
+		//Rectangulo.esUnCuadrado();
+		//Rectangulo.getArea();
+		//Rectangulo.getPerimetro();
+		//Rectangulo.toString();
 		
 		// Fin modificacion
 	}
@@ -276,8 +311,44 @@ public class Apartado030101 extends Apartado {
 		cabecera("08", "");
 
 		// Inicio modificacion
+		int num1 = 0;
+		int num2 = 0;
+		int aux = 0;
+
+		System.out.println("Introduce el primer numero:");
+		num1=Teclado.readInteger();
+
+		System.out.println("Introduce el segundo numero:");
+		num2=Teclado.readInteger();
+
+		if(num1>num2){
+
+		System.out.println("El primer numero es mayor que el segundo numero.Se intercambian los valores");
+			
+			aux = num1;
+			num1 = num2;
+			num2 = aux;
+
+		System.out.println("primer numero:" + num1);
+		System.out.println("segundo numero:" + num2);
 		
+
+		}
+
+		if(num2>num1){
+
+		System.out.println("El segundo numero es mayor que el primer numero.Se intercambian los valores");
+			
+			aux = num2;
+			num2 = num1;
+			num1 = aux;
+
+		System.out.println("primer numero:" + num1);
+		System.out.println("segundo numero:" + num2);
 		
+
+		}
+			
 		// Fin modificacion
 	}
 
