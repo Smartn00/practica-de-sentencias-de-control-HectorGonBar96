@@ -28,6 +28,40 @@ public class Apartado030103 extends Apartado {
 		cabecera("01","");
 
 		// Inicio modificacion
+
+		int nota=0;
+		
+		System.out.println("Introduzca la calificación:");
+		
+		nota=Teclado.readInteger();
+
+		switch(nota){
+
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+                      	System.out.println("Insuficiente");
+		      	break;
+		case 5:
+		      	System.out.println("Suficiente");
+		      	break;
+		case 6:
+		     	System.out.println("Bien");
+			break;
+		case 7:
+		case 8:
+		     	System.out.println("Notable");
+			break;
+		case 9:
+			System.out.println("Sobresaliente");
+			break;
+		case 10:
+			System.out.println("Matricula");
+			break;
+		default:
+			System.out.println("La calificación es incorrecta");
+		}
         // Fin modificacion
 	}
 
@@ -41,8 +75,27 @@ public class Apartado030103 extends Apartado {
 	 */
 	public void ejercicio02() {
 		cabecera("02", "");
-
+		
 		// Inicio modificacion
+		int num=0;
+		int ultimoDigito=0;
+		
+		System.out.println("Introduzca un  numero: ");
+		num = Teclado.readInteger();
+
+		ultimoDigito = num % 10;
+
+		switch(ultimoDigito){
+
+		case 0:
+			System.out.println("Tiene un anillo");
+			break;
+		case 8:
+			System.out.println("Tiene dos anillos");
+			break;
+		default:
+			System.out.println("No tiene anillos");
+		}
 		// Fin modificacion
 	}
 
@@ -57,6 +110,52 @@ public class Apartado030103 extends Apartado {
 		cabecera("03", "");
 
 		// Inicio modificacion
+		int num1 = 0;
+		int num2 = 0;
+		int opcion = 0;
+		int suma = 0;
+		int multiplicacion = 0;
+
+		System.out.println("Introduzca el numero1: ");
+
+		num1 = Teclado.readInteger();
+
+		System.out.println("Introduzca el numero2: ");
+
+		num2 = Teclado.readInteger();
+		 	
+		System.out.println("Elija una opcion: 1-Sumar 2-Multiplicar 3-Divisores");
+		
+		opcion = Teclado.readInteger();
+		
+		switch(opcion){
+
+		case 1:
+			suma = num1 + num2;
+			System.out.println("Suma: " + suma);
+			break;
+		case 2:
+			multiplicacion = num1 * num2;
+			System.out.println("Multiplicación: " + multiplicacion);
+			break;
+		case 3:
+			if(num1 % num2 == 0){
+
+				System.out.println("El numero1 es divisor del numero2");
+
+			}else if(num2 % num1 == 0){
+
+				System.out.println("El numero2 es divisor del numero1");
+			
+			}else{
+
+				System.out.println("El numero1 no es divisor del numero2 y viceversa");
+
+			}
+			break;
+		default:
+			System.out.println("Opcion incorrecta");
+		}
 		// Fin modificacion
 	}
 
