@@ -106,13 +106,27 @@ public class NumeroEntero {
 	}
 	
 	
-	 /* -- Inicio modificacion del ejercicio10 Apartado030101.
-	 * boolean equals(NumeroEntero n){
-	 *	  
-	 * }
-	 * 
-	 * -- Fin modificacion del ejercicio10 Apartado030101
-	 */
+	 //Inicio modificacion del ejercicio10 Apartado030101.
+	  /*boolean equals(NumeroEntero n1,NumeroEntero n2){
+		
+		if(n1.equals(n2)==true){
+		
+		NumeroEntero=true;
+
+		}
+
+		if(n1.equals(n2)==false){
+		
+		NumeroEntero=false;
+		
+		}
+		
+	 	
+		return NumeroEntero;  
+	 }*/
+	  
+	 // Fin modificacion del ejercicio10 Apartado030101
+	 
 	 
 	
 	
