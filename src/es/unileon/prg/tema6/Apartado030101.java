@@ -287,14 +287,12 @@ public class Apartado030101 extends Apartado {
 
 		// Inicio modificacion
 		
-		//Rectangulo.getBase();
-		//Rectangulo.getAltura();
-		//Rectangulo.setBase(int base);
-		//Rectangulo.setAltura(int altura);
-		//Rectangulo.esUnCuadrado();
-		//Rectangulo.getArea();
-		//Rectangulo.getPerimetro();
-		//Rectangulo.toString();
+		rectangulo.getBase();
+		rectangulo.getAltura();
+		rectangulo.setBase(base);
+		rectangulo.setAltura(altura);
+		rectangulo.esUnCuadrado();
+		System.out.println(rectangulo.toString());
 		
 		// Fin modificacion
 	}
