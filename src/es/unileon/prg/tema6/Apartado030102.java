@@ -259,6 +259,74 @@ public class Apartado030102 extends Apartado {
 		cabecera("06", "");
 
 		// Inicio modificacion
-		// Fin modificacion
-	}
-}
+
+		int num1=0;
+		int num2=0;
+		int num3=0;
+
+		System.out.println("Introduzca el primer numero: ");
+
+		num1 = Teclado.readInteger();
+
+		System.out.println("Introduzca el segundo numero: ");
+
+		num2= Teclado.readInteger();
+
+		System.out.println("Introduzca el tercer numero: ");
+
+		num3= Teclado.readInteger();
+
+
+	 	if(num1 > num2 && num1 > num3){  
+    					System.out.println("El numero mayor es: "+num1);  
+   		 }else{  
+       			 if(num2 > num1 && num2 > num3){  
+       				 System.out.println("El numero mayor es: "+num2);    
+       			 }else{  
+        			System.out.println("El numero mayor es: "+num3);  
+        		}  
+   		 }  
+
+		if(num1==num2 && num1==num3){
+				System.out.println("Los tres numeros son iguales: "+num1+" "+num2+" "+num3);
+		}
+		else if(num1==num2){
+				System.out.println("el primer numero y el segundo son iguales: "+num1+" "+num2);
+		} 
+		else if(num1==num3){
+				System.out.println("el primer numero y el tercero son iguales: "+num1+" "+num3);
+		}
+		else if(num2==num3){
+				System.out.println("el segundo numero y el tercero son iguales: "+num2+" "+num3);
+		}
+		else{
+				System.out.println("Ninguno de los tres numeros son iguales: "+num1+" "+num2+" "+num3);	
+		}
+			// Fin modificacion
+		
+ 		}
+	    }
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
