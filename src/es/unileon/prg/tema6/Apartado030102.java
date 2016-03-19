@@ -22,6 +22,8 @@ public class Apartado030102 extends Apartado {
 	 * </br>
 	 *
 	 * Realizar las modificaciones necesarias para que al ejecutar el metodo se ofrezca 
+
+	
 	 * al usuario la posibilidad de obtener el area o el perimetro del rectangulo.
 	 * 
 	 */
@@ -31,8 +33,21 @@ public class Apartado030102 extends Apartado {
 		Rectangulo rectangulo=new Rectangulo(10,5);
 		System.out.println("Introduce una opcion (1 - Area, 2 - Perimetro):");
 		// Inicio modificacion
-        
+        	int opcion =Teclado.readInteger();
+
+		if(opcion==1){
+			rectangulo.getArea();
+			System.out.println(rectangulo.toString());
+		}
 		
+		if(opcion==2){
+			rectangulo.getPerimetro();
+			System.out.println(rectangulo.toString());
+		}
+		
+		else{
+			System.out.println("Opcion incorrecta");
+		}
 		// Fin modificacion
 	}
 
@@ -47,7 +62,22 @@ public class Apartado030102 extends Apartado {
 	public void ejercicio02() {
 		cabecera("02", "");
 		// Inicio modificacion
+		int anyo=0;
+		System.out.println("Intruzca el año:");
+
+		 anyo = Teclado.readInteger();
 		
+		if ((anyo % 4 == 0) && ((anyo % 100 != 0) || (anyo % 400 == 0))){
+
+    			System.out.println("El año es bisiesto");
+
+		}
+
+   		 else{
+
+    			System.out.println("El año no es bisiesto");
+
+		}
 		// Fin modificacion
 	}
 
@@ -118,8 +148,54 @@ public class Apartado030102 extends Apartado {
 		cabecera("04", "");
 
 		// Inicio modificacion
+		int num1 = 0;
+		int num2 = 0;
+		int opcion = 0;
+		int suma = 0;
+		int multiplicacion = 0;
+
+		System.out.println("Introduzca el numero1: ");
+
+		num1 = Teclado.readInteger();
+
+		System.out.println("Introduzca el numero2: ");
+
+		num2 = Teclado.readInteger();
+		 	
+		System.out.println("Elija una opcion: 1-Sumar 2-Multiplicar 3-Divisores");
 		
+		opcion = Teclado.readInteger();
 		
+		if(opcion == 1){
+
+			suma = num1 + num2;
+			System.out.println("Suma: " + suma);
+
+		}else if(opcion == 2){
+
+			multiplicacion = num1 * num2;
+			System.out.println("Multiplicación: " + multiplicacion);
+
+		}else if(opcion == 3){
+
+			if(num1 % num2 == 0){
+
+				System.out.println("El numero1 es divisor del numero2");
+
+			}else if(num2 % num1 == 0){
+
+				System.out.println("El numero2 es divisor del numero1");
+			
+			}else{
+
+				System.out.println("El numero1 no es divisor del numero2 y viceversa");
+
+			}
+		}else{
+			
+			System.out.println("Opcion incorrecta");
+
+                } 
 		
         // Fin modificacion
 	}
@@ -143,10 +219,31 @@ public class Apartado030102 extends Apartado {
 	public void ejercicio05() {
 		cabecera("05","");
 
-		int a=2, b=5, c=1; //Modificar los valores para realizar pruebas o leerlos por teclado
+		int a, b, c; //Modificar los valores para realizar pruebas o leerlos por teclado
 		
-		// Ecuacion2Grado ecuacion=new Ecuacion2Grado(a,b,c);
+		System.out.println("Introduzca el coeficiente a: ");
+
+		a = Teclado.readInteger();
+
+		System.out.println("Introduzca el coeficiente b: ");
+
+		b = Teclado.readInteger();
+		
+		System.out.println("Introduzca el coeficiente c: ");
+
+		c = Teclado.readInteger();
+
+		
+		 Ecuacion2Grado ecuacion=new Ecuacion2Grado(a,b,c);
+
 		// Inicio modificacion
+		
+		ecuacion.getA();
+		ecuacion.getB();
+		ecuacion.getC();
+		ecuacion.numeroDeSoluciones();
+		System.out.println(ecuacion.toString());		
+
         // Fin modificacion
 	}
 
