@@ -17,6 +17,10 @@ public class Rectangulo {
 	 */
 	private int _altura;
 
+	private int _area;
+	
+	private int _perimetro;
+
 	
 	/**
 	 * Constructor de la clase. Crea un rectangulo sin dimensiones
@@ -24,6 +28,8 @@ public class Rectangulo {
 	public Rectangulo() {
 		_base = 0;
 		_altura = 0;
+		_area = 0;
+		_perimetro = 0;
 	}
 
 	/**
@@ -36,13 +42,17 @@ public class Rectangulo {
 	 *           Altura del rectangulo
 	 */
 	public Rectangulo(int base, int altura) {
+
 		//Inicio modificacion ejercicio07
+		
+		_base = base;
+		_altura = altura;
 
 		if( base<=0 && altura<=0){
 		_base=0;
 		_altura=0;
 		}
-	
+		
 		//Fin modificacion ejercicio07		
 	}
 	
@@ -75,7 +85,7 @@ public class Rectangulo {
 		//Inicio modificacion ejercicio07
 
 		if(base > 0){
-				System.out.println("Introduce la base del rectangulo:");
+				System.out.println("Introduce la nueva base del rectangulo:");
 				base=Teclado.readInteger();
 		}
 		
@@ -91,6 +101,7 @@ public class Rectangulo {
 	 */
 	public void setAltura(int altura){
 		//Inicio modificacion ejercicio07
+
 		if(altura>0){
 			
 			System.out.println("Introduce la nueva altura del rectangulo:");
@@ -139,7 +150,10 @@ public class Rectangulo {
 	 */
 	public long getArea(){
 	
-		return _base*_altura;
+			
+		_area = _base * _altura;
+
+		return _area;
 		
 	}
 	
@@ -150,8 +164,10 @@ public class Rectangulo {
 	 * 		Retorna el perimetro del rectangulo
 	 */
 	public long getPerimetro(){
+		
+		_perimetro = (_base*2 + _altura*2);
 	
-		return (_base*2 +_altura*2);
+		return _perimetro;
 		
 	}
 	
@@ -168,8 +184,16 @@ public class Rectangulo {
 		salida.append("Rectangulo: "+" ");
 		salida.append("base: "+_base+" ");
 		salida.append("altura: "+_altura+" ");
+		salida.append("area: "+ _area +" "); 
+		salida.append("perimetro: "+ _perimetro +" "); 
+		
+
 		//Inicio modificacion ejercicio07
-		salida.append(" Es un Cuadrado");
+
+		if(esUnCuadrado()==true){
+		salida.append(" Es un cuadrado");
+		}
+		
 
 		//Fin modificacion ejercicio07
 		return salida.toString();	
